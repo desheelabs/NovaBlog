@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NovaBlog — Premium Blogging Template</title>
+  <meta name="description" content="A premium-feel blogging template built with HTML, CSS, and JavaScript." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+ <body data-dynamic-posts>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="NovaBlog Home">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">NovaBlog</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="navPanel">
+          <span class="sr-only">Toggle menu</span>
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <div class="nav-panel" id="navPanel" data-nav-panel>
+          <a class="nav-link" href="#" data-scroll>Home</a>
+
+          <div class="nav-mega" data-mega>
+            <button class="nav-link nav-link--button" type="button" data-mega-toggle aria-expanded="false">
+              Categories
+              <span class="chev" aria-hidden="true"></span>
+            </button>
+            <div class="mega" role="menu" aria-label="Categories">
+              <div class="mega-col">
+                <div class="mega-title">Popular Categories</div>
+                <a class="mega-link" href="#" data-scroll>Design</a>
+                <a class="mega-link" href="#" data-scroll>Development</a>
+                <a class="mega-link" href="#" data-scroll>AI</a>
+                <a class="mega-link" href="#" data-scroll>Productivity</a>
+              </div>
+              <div class="mega-col">
+                <div class="mega-title">Trending</div>
+                <a class="mega-card" href="post.html">
+                  <div class="mega-card__title">Building a Premium Reading Experience</div>
+                  <div class="mega-card__meta">6 min read</div>
+                </a>
+                <a class="mega-card" href="post.html">
+                  <div class="mega-card__title">Glassmorphism UI Done Right</div>
+                  <div class="mega-card__meta">4 min read</div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a class="nav-link" href="post.html">Sample Post</a>
+          <a class="nav-link" href="#" data-scroll>About</a>
+
+          <div class="nav-actions">
+            <button class="icon-btn" type="button" data-notify-bell aria-label="Notifications">
+              <span class="icon" aria-hidden="true">🔔</span>
+            </button>
+            <div data-auth-area></div>
+            <button class="icon-btn" type="button" data-neo-toggle aria-label="Toggle neumorphism">
+              <span class="icon" aria-hidden="true">◧</span>
+            </button>
+            <button class="icon-btn" type="button" data-min-toggle aria-label="Toggle minimalist mode">
+              <span class="icon" aria-hidden="true">▦</span>
+            </button>
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+              <span class="icon" aria-hidden="true" data-theme-icon>◐</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="pill">Premium HTML/CSS/JS</div>
+          <h1 class="hero-title">A professional blogging UI with a premium feel.</h1>
+          <p class="hero-subtitle">Responsive layout, dark/light mode, mega menu, skeleton loading, smooth scrolling, and modern glassmorphism styling.</p>
+          <div class="hero-cta">
+            <a class="btn" href="post.html">Read Sample Post</a>
+            <a class="btn btn--ghost" href="#posts" data-scroll>Browse Posts</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat__num">10+</div>
+              <div class="stat__label">Components</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">0</div>
+              <div class="stat__label">Frameworks</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">100</div>
+              <div class="stat__label">Lighthouse-minded</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card glass" aria-hidden="true">
+          <div class="hero-card__top">
+            <div class="dot dot--r"></div>
+            <div class="dot dot--y"></div>
+            <div class="dot dot--g"></div>
+          </div>
+          <div class="hero-card__body">
+            <div class="line w-80"></div>
+            <div class="line w-60"></div>
+            <div class="line w-90"></div>
+            <div class="spacer"></div>
+            <div class="line w-70"></div>
+            <div class="line w-50"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Swipe gallery">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Gallery</h2>
+          <div class="section-actions">
+            <div class="form-note">Swipe/scroll horizontally.</div>
+          </div>
+        </div>
+        <div class="hscroll" data-hscroll>
+          <div class="hscroll-track" data-hscroll-track></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Follow us">
+      <div class="container">
+        <div class="follow glass">
+          <div class="follow-title">Follow NovaBlog</div>
+          <div class="follow-grid" data-follow-counters>
+            <div class="follow-item">
+              <div class="follow-num" data-counter="twitter">—</div>
+              <div class="follow-label">Twitter</div>
+            </div>
+            <div class="follow-item">
+              <div class="follow-num" data-counter="youtube">—</div>
+              <div class="follow-label">YouTube</div>
+            </div>
+            <div class="follow-item">
+              <div class="follow-num" data-counter="instagram">—</div>
+              <div class="follow-label">Instagram</div>
+            </div>
+            <div class="follow-item">
+              <div class="follow-num" data-counter="linkedin">—</div>
+              <div class="follow-label">LinkedIn</div>
+            </div>
+          </div>
+          <button class="btn btn--ghost" type="button" data-newsletter-open>Subscribe to Newsletter</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Featured posts">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Featured</h2>
+          <div class="slider-actions">
+            <button class="icon-btn" type="button" data-slider-prev aria-label="Previous featured post">←</button>
+            <button class="icon-btn" type="button" data-slider-next aria-label="Next featured post">→</button>
+          </div>
+        </div>
+
+        <div class="slider" aria-roledescription="carousel">
+          <div class="slider-track" data-slider-track></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="posts">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Latest posts</h2>
+          <div class="section-actions">
+            <div class="search" role="search">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input class="search-input" type="search" placeholder="Search posts..." autocomplete="off" data-live-search />
+              <span class="search-count" data-results-count>—</span>
+            </div>
+            <button class="chip is-active" type="button">All</button>
+            <button class="chip" type="button">Design</button>
+            <button class="chip" type="button">Dev</button>
+            <button class="chip" type="button">AI</button>
+          </div>
+        </div>
+
+        <div class="grid" data-skeleton-grid>
+          <article class="card post-card" data-skel>
+            <div class="card-media skeleton"></div>
+            <div class="card-body">
+              <div class="skeleton text w-40"></div>
+              <div class="skeleton text w-85"></div>
+              <div class="skeleton text w-70"></div>
+              <div class="skeleton text w-55"></div>
+            </div>
+          </article>
+          <article class="card post-card" data-skel>
+            <div class="card-media skeleton"></div>
+            <div class="card-body">
+              <div class="skeleton text w-35"></div>
+              <div class="skeleton text w-75"></div>
+              <div class="skeleton text w-65"></div>
+              <div class="skeleton text w-50"></div>
+            </div>
+          </article>
+          <article class="card post-card" data-skel>
+            <div class="card-media skeleton"></div>
+            <div class="card-body">
+              <div class="skeleton text w-45"></div>
+              <div class="skeleton text w-80"></div>
+              <div class="skeleton text w-60"></div>
+              <div class="skeleton text w-55"></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="masonry is-hidden" data-post-grid></div>
+
+        <div class="load-row">
+          <button class="btn btn--ghost" type="button" data-load-more>Load more</button>
+        </div>
+      </div>
+    </section>
+
+    <div data-footer-host></div>
+  </main>
+
+  <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <div class="modal" data-newsletter-modal aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-card glass" role="dialog" aria-modal="true" aria-label="Newsletter">
+      <button class="modal-close" type="button" data-modal-close aria-label="Close">×</button>
+      <div class="modal-title">Subscribe</div>
+      <div class="modal-sub">Get new posts in your inbox. No spam.</div>
+      <form class="form" data-newsletter-form>
+        <label class="field">
+          <span class="field-label">Email</span>
+          <input class="input" type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+      <div class="form-note" data-newsletter-note></div>
+    </div>
+  </div>
+
+  <div class="modal" data-auth-modal aria-hidden="true">
+    <div class="modal-backdrop" data-auth-close></div>
+    <div class="modal-card glass" role="dialog" aria-modal="true" aria-label="Authentication">
+      <button class="modal-close" type="button" data-auth-close aria-label="Close">×</button>
+      <div class="modal-title" data-auth-title>Login</div>
+      <div class="modal-sub" data-auth-sub>Access profile and admin (demo).</div>
+      <form class="form" data-auth-form>
+        <label class="field" data-auth-name-field>
+          <span class="field-label">Name</span>
+          <input class="input" type="text" name="name" placeholder="Your name" />
+        </label>
+        <label class="field">
+          <span class="field-label">Email</span>
+          <input class="input" type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label class="field">
+          <span class="field-label">Password</span>
+          <input class="input" type="password" name="password" placeholder="••••••••" required />
+        </label>
+        <button class="btn" type="submit" data-auth-submit>Login</button>
+      </form>
+      <div class="form-note" data-auth-note></div>
+      <div class="form-row" style="margin-top:12px;">
+        <button class="btn btn--ghost" type="button" data-auth-switch>Switch to Signup</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" data-media-modal aria-hidden="true">
+    <div class="modal-backdrop" data-media-close></div>
+    <div class="modal-card glass media" role="dialog" aria-modal="true" aria-label="Media viewer">
+      <button class="modal-close" type="button" data-media-close aria-label="Close">×</button>
+      <div class="media-head">
+        <div class="modal-title" data-media-title>—</div>
+        <div class="palette" data-palette></div>
+      </div>
+      <div class="media-stage" data-media-stage></div>
+      <div class="form-row" style="margin-top:12px; justify-content:space-between;">
+        <button class="btn btn--ghost" type="button" data-media-prev>← Prev</button>
+        <button class="btn" type="button" data-media-zoom>Zoom</button>
+        <button class="btn btn--ghost" type="button" data-media-next>Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="fab" type="button" data-fab aria-label="Quick actions">＋</button>
+
+  <div class="cursor" data-cursor aria-hidden="true"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/footer-template.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

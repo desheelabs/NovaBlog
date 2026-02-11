@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile — NovaBlog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="NovaBlog Home">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">NovaBlog</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="navPanel">
+          <span class="sr-only">Toggle menu</span>
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <div class="nav-panel" id="navPanel" data-nav-panel>
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="profile.html">Profile</a>
+          <a class="nav-link" href="admin.html">Admin</a>
+          <div class="nav-actions">
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+              <span class="icon" aria-hidden="true" data-theme-icon>◐</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1 class="section-title">Your profile</h1>
+        <div class="section-actions">
+          <button class="btn btn--ghost" type="button" data-logout>Logout</button>
+        </div>
+      </div>
+
+      <div class="card" style="padding:14px;">
+        <div class="form-note" data-profile-summary>—</div>
+      </div>
+
+      <section class="section">
+        <div class="section-head">
+          <h2 class="section-title">Liked posts</h2>
+        </div>
+        <div class="grid" data-liked-grid></div>
+      </section>
+    </div>
+  </main>
+
+  <div data-footer-host></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/footer-template.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/profile.js"></script>
+</body>
+</html>

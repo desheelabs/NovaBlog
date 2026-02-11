@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin — NovaBlog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="NovaBlog Home">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">NovaBlog</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="navPanel">
+          <span class="sr-only">Toggle menu</span>
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <div class="nav-panel" id="navPanel" data-nav-panel>
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="profile.html">Profile</a>
+          <a class="nav-link" href="admin.html">Admin</a>
+          <div class="nav-actions">
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+              <span class="icon" aria-hidden="true" data-theme-icon>◐</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1 class="section-title">Admin dashboard</h1>
+        <div class="section-actions">
+          <label class="chip" style="display:flex;align-items:center;gap:10px;">
+            <input type="checkbox" data-maintenance-toggle />
+            Maintenance mode
+          </label>
+          <a class="btn btn--ghost" href="index.html">View site</a>
+        </div>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr));">
+        <section class="card" style="padding:14px;">
+          <h2 style="margin:0 0 10px;">Draft mode</h2>
+          <form class="form" data-draft-form>
+            <label class="field">
+              <span class="field-label">Title</span>
+              <input class="input" name="title" required />
+            </label>
+            <label class="field">
+              <span class="field-label">Category</span>
+              <input class="input" name="category" placeholder="Design" />
+            </label>
+            <label class="field">
+              <span class="field-label">Tags (comma separated)</span>
+              <input class="input" name="tags" placeholder="UI, UX" />
+            </label>
+            <label class="field">
+              <span class="field-label">Excerpt</span>
+              <textarea class="input textarea" name="excerpt" rows="3"></textarea>
+            </label>
+            <label class="field">
+              <span class="field-label">Content HTML</span>
+              <textarea class="input textarea" name="contentHtml" rows="8" placeholder="&lt;h2&gt;Heading&lt;/h2&gt;&lt;p&gt;Text...&lt;/p&gt;"></textarea>
+            </label>
+            <div class="form-row">
+              <button class="btn" type="submit">Save draft</button>
+              <button class="btn btn--ghost" type="button" data-draft-new>New</button>
+            </div>
+          </form>
+          <div class="form-note" data-draft-note></div>
+        </section>
+
+        <section class="card" style="padding:14px;">
+          <h2 style="margin:0 0 10px;">Drafts</h2>
+          <div class="comment-list" data-drafts-list></div>
+        </section>
+
+        <section class="card" style="padding:14px;">
+          <h2 style="margin:0 0 10px;">Category management</h2>
+          <form class="form" data-cat-form>
+            <label class="field">
+              <span class="field-label">Add category</span>
+              <input class="input" name="category" placeholder="New category" />
+            </label>
+            <button class="btn" type="submit">Add</button>
+          </form>
+          <div class="comment-list" data-cat-list></div>
+        </section>
+
+        <section class="card" style="padding:14px;">
+          <h2 style="margin:0 0 10px;">Tag cloud</h2>
+          <div class="tag-row" data-tag-cloud></div>
+        </section>
+      </div>
+
+      <section class="section">
+        <div class="section-head">
+          <h2 class="section-title">Analytics (demo)</h2>
+        </div>
+        <div class="card" style="padding:14px;">
+          <canvas id="analyticsChart" height="120"></canvas>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2 class="section-title">Media gallery (UI)</h2>
+        </div>
+        <div class="card" style="padding:14px;">
+          <div class="form-note">This is a UI-only gallery for CodeCanyon demo. Real uploads need a backend.</div>
+          <div class="grid" style="grid-template-columns:repeat(4,minmax(0,1fr));" data-media-grid></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div data-footer-host></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/footer-template.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

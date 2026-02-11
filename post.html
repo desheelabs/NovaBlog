@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sample Post — NovaBlog</title>
+  <meta name="description" content="Sample post with reading progress bar, smooth scrolling, and a premium layout." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#article">Skip to article</a>
+
+  <div class="progress" aria-hidden="true">
+    <div class="progress-bar" data-reading-progress></div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="NovaBlog Home">
+        <span class="brand-mark">N</span>
+        <span class="brand-name">NovaBlog</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="navPanel">
+          <span class="sr-only">Toggle menu</span>
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <div class="nav-panel" id="navPanel" data-nav-panel>
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="#toc" data-scroll>TOC</a>
+          <a class="nav-link" href="#" data-scroll>About</a>
+          <div class="nav-actions">
+            <div data-auth-area></div>
+            <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+              <span class="icon" aria-hidden="true" data-theme-icon>◐</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="post" id="main">
+    <div class="container post-layout">
+      <aside class="post-aside">
+        <div class="aside-card glass" id="toc">
+          <div class="aside-title">On this page</div>
+          <nav class="toc" aria-label="Table of contents" data-toc></nav>
+        </div>
+      </aside>
+
+      <article class="post-article" id="article">
+        <header class="post-head">
+          <div class="post-kicker" data-post-kicker>—</div>
+          <h1 class="post-title" data-post-title>—</h1>
+          <p class="post-subtitle" data-post-subtitle>—</p>
+          <div class="post-meta">
+            <div class="avatar" aria-hidden="true">RK</div>
+            <div>
+              <div class="meta-strong">R.K.</div>
+              <div class="meta-soft"><time data-post-date datetime="">—</time> • Updated just now</div>
+            </div>
+          </div>
+
+          <div class="engagement" aria-label="Engagement controls">
+            <button class="eng-btn" type="button" data-like-btn aria-pressed="false">
+              <span aria-hidden="true">♥</span>
+              <span>Like</span>
+              <span class="eng-count" data-like-count>0</span>
+            </button>
+
+            <div class="rating" aria-label="Rate this post" data-rating>
+              <button class="star" type="button" data-star="1" aria-label="Rate 1 star">★</button>
+              <button class="star" type="button" data-star="2" aria-label="Rate 2 stars">★</button>
+              <button class="star" type="button" data-star="3" aria-label="Rate 3 stars">★</button>
+              <button class="star" type="button" data-star="4" aria-label="Rate 4 stars">★</button>
+              <button class="star" type="button" data-star="5" aria-label="Rate 5 stars">★</button>
+              <span class="rating-note" data-rating-note>—</span>
+            </div>
+
+            <button class="eng-btn" type="button" data-tts-play>
+              <span aria-hidden="true">▶</span>
+              <span>Listen</span>
+            </button>
+            <button class="eng-btn" type="button" data-tts-stop>
+              <span aria-hidden="true">■</span>
+              <span>Stop</span>
+            </button>
+
+            <button class="eng-btn" type="button" data-print>
+              <span aria-hidden="true">⎙</span>
+              <span>Print</span>
+            </button>
+          </div>
+        </header>
+
+        <div class="post-cover glass" aria-hidden="true" data-post-cover></div>
+
+        <div class="prose" data-article></div>
+
+        <section class="card is-hidden" style="padding:14px;" data-password-gate>
+          <div class="modal-title">Password required</div>
+          <div class="modal-sub">This post is protected. Enter password to continue.</div>
+          <form class="form" data-password-form>
+            <label class="field">
+              <span class="field-label">Password</span>
+              <input class="input" type="password" name="password" required />
+            </label>
+            <button class="btn" type="submit">Unlock</button>
+          </form>
+          <div class="form-note" data-password-note></div>
+        </section>
+
+        <section class="poll" aria-label="Poll" data-poll></section>
+
+        <section class="author" aria-label="Author" data-author>
+          <div class="author-box glass">
+            <div class="author-avatar" aria-hidden="true" data-author-avatar>RK</div>
+            <div class="author-info">
+              <div class="author-name" data-author-name>—</div>
+              <div class="author-title" data-author-title>—</div>
+              <div class="author-bio" data-author-bio>—</div>
+              <div class="author-links" data-author-links></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="related" aria-label="Related posts">
+          <div class="related-head">
+            <h2 class="related-title">Related posts</h2>
+          </div>
+          <div class="related-grid" data-related-grid></div>
+        </section>
+
+        <section class="comments" aria-label="Comments" data-comments>
+          <div class="related-head">
+            <h2 class="related-title">Comments</h2>
+          </div>
+          <form class="form" data-comment-form>
+            <label class="field">
+              <span class="field-label">Name</span>
+              <input class="input" type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label class="field">
+              <span class="field-label">Comment</span>
+              <textarea class="input textarea" name="comment" rows="4" placeholder="Write a comment..." required></textarea>
+            </label>
+            <div class="form-row">
+              <button class="btn" type="submit">Post comment</button>
+              <button class="btn btn--ghost" type="button" data-clear-comments>Clear</button>
+            </div>
+          </form>
+          <div class="comment-list" data-comment-list></div>
+        </section>
+
+        <div class="post-footer glass">
+          <div class="tag-row" aria-label="Tags">
+            <span class="tag">UI</span>
+            <span class="tag">UX</span>
+            <span class="tag">Template</span>
+          </div>
+          <div class="post-actions">
+            <a class="btn btn--ghost" href="index.html">← Back to Home</a>
+            <div class="share" data-share></div>
+            <button class="btn" type="button" data-copy-link>Copy Link</button>
+            <button class="btn btn--ghost" type="button" data-export-pdf>Export PDF</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div data-footer-host></div>
+  </main>
+
+  <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <div class="modal" data-auth-modal aria-hidden="true">
+    <div class="modal-backdrop" data-auth-close></div>
+    <div class="modal-card glass" role="dialog" aria-modal="true" aria-label="Authentication">
+      <button class="modal-close" type="button" data-auth-close aria-label="Close">×</button>
+      <div class="modal-title" data-auth-title>Login</div>
+      <div class="modal-sub" data-auth-sub>Access profile and admin (demo).</div>
+      <form class="form" data-auth-form>
+        <label class="field" data-auth-name-field>
+          <span class="field-label">Name</span>
+          <input class="input" type="text" name="name" placeholder="Your name" />
+        </label>
+        <label class="field">
+          <span class="field-label">Email</span>
+          <input class="input" type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label class="field">
+          <span class="field-label">Password</span>
+          <input class="input" type="password" name="password" placeholder="••••••••" required />
+        </label>
+        <button class="btn" type="submit" data-auth-submit>Login</button>
+      </form>
+      <div class="form-note" data-auth-note></div>
+      <div class="form-row" style="margin-top:12px;">
+        <button class="btn btn--ghost" type="button" data-auth-switch>Switch to Signup</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" data-media-modal aria-hidden="true">
+    <div class="modal-backdrop" data-media-close></div>
+    <div class="modal-card glass media" role="dialog" aria-modal="true" aria-label="Media viewer">
+      <button class="modal-close" type="button" data-media-close aria-label="Close">×</button>
+      <div class="media-head">
+        <div class="modal-title" data-media-title>—</div>
+        <div class="palette" data-palette></div>
+      </div>
+      <div class="media-stage" data-media-stage></div>
+      <div class="form-row" style="margin-top:12px; justify-content:space-between;">
+        <button class="btn btn--ghost" type="button" data-media-prev>← Prev</button>
+        <button class="btn" type="button" data-media-zoom>Zoom</button>
+        <button class="btn btn--ghost" type="button" data-media-next>Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="fab" type="button" data-fab aria-label="Quick actions">＋</button>
+
+  <div class="cursor" data-cursor aria-hidden="true"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/footer-template.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/post.js"></script>
+</body>
+</html>
